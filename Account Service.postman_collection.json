@@ -1,0 +1,680 @@
+{
+	"info": {
+		"_postman_id": "63818215-2503-4f0e-bc37-633c2648e44a",
+		"name": "Account Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23640167"
+	},
+	"item": [
+		{
+			"name": "Account Service",
+			"item": [
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "/api/admin/user",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "alper@acme.com",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "patatespatates2",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:28852/api/admin/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "28852",
+									"path": [
+										"api",
+										"admin",
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "api/admin/user/role",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "alper@acme.com",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "patatespatates",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"user\": \"alper2@acme.com\",\n   \"role\": \"ACCOUNTANT\",\n   \"operation\": \"GRANT\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:28852/api/admin/user/role",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "28852",
+									"path": [
+										"api",
+										"admin",
+										"user",
+										"role"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/admin/user/access",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "alper@acme.com",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "patatespatates",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"user\": \"alper2@acme.com\",\n   \"operation\": \"UNLOCK\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:28852/api/admin/user/access",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "28852",
+									"path": [
+										"api",
+										"admin",
+										"user",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/admin/user/access",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "patatespatates",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "alper@acme.com",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"user\": \"maxmustermann@acme.com\",\n   \"operation\": \"LOCK\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:28852/api/admin/user/access",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "28852",
+									"path": [
+										"api",
+										"admin",
+										"user",
+										"access"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/api/admin/user",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "alper2@acme.com",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "patatespatates",
+											"type": "string"
+										},
+										{
+											"key": "saveHelperData",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "showPassword",
+											"value": false,
+											"type": "boolean"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:28852/api/admin/user/alper@acme.com",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "28852",
+									"path": [
+										"api",
+										"admin",
+										"user",
+										"alper@acme.com"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"John\",\n   \"lastname\": \"Doe\",\n   \"email\": \"alper2@acme.com\",\n   \"password\": \"patatespatates\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:28852/api/auth/signup",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alper8@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "patatespatates",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:28852/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rXoa4CvqpLxW",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ivanivanov@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:28852/api/empl/payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"empl",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changepass",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "patatespatates",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "alper@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"new_password\": \"patatespatates\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:28852/api/auth/changepass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"auth",
+								"changepass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/acct/payments",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alper2@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "patatespatates",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"employee\": \"alper2@acme.com\",\n        \"period\": \"10-2023\",\n        \"salary\": 4123126\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:28852/api/acct/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"acct",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/acct/payments",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alper2@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "patatespatates",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employee\": \"alper2@acme.com\",\n    \"period\": \"10-2023\",\n    \"salary\": 412312721\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:28852/api/acct/payments",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"acct",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/empl/payment",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "alper2@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "patatespatates",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:28852/api/empl/payment?period=12-2023",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"empl",
+								"payment"
+							],
+							"query": [
+								{
+									"key": "period",
+									"value": "12-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/security/events/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rXoa4CvqpLxW",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "ivanivanov@acme.com",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:28852/api/security/events/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "28852",
+							"path": [
+								"api",
+								"security",
+								"events",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
